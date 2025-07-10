@@ -11,8 +11,8 @@ const StyledForm = styled.form`
   display: flex;
   height: 55px;
   border: 3px solid ${dark};
-    margin-top: 10px;
-    
+  margin-top: 10px;
+
   button {
     width: 50px;
     background: ${dark};
@@ -34,10 +34,15 @@ const StyledForm = styled.form`
   }
 `;
 
-const ChatInput = () => {
+const ChatInput = ({ onSubmit, loading }) => {
   return (
-    <StyledForm>
-      <input type="text" name="message" placeholder="메세지를 입력하세요..." />
+    <StyledForm onSubmit={onSubmit} autoComplete="off">
+      <input
+        type="text"
+        name="message"
+        placeholder="메세지를 입력하세요..."
+        disabled={loading}
+      />
       <button type="submit">
         <FaLocationArrow />
       </button>

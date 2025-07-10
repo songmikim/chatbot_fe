@@ -35,11 +35,12 @@ const StyledHeader = styled.header`
     align-items: center;
 
     &.on {
-      text-shadow: 2px 2px 5px ${dark};
+      color: ${dark};
     }
 
     svg {
       font-size: ${extraBig};
+      margin-right:7px;
     }
   }
 
@@ -56,7 +57,7 @@ const Header = () => {
           to="/"
           className={({ isActive }) => classNames({ on: isActive })}
         >
-          <BsChatRightDots />
+          <BsChatRightDots /> 
           <span>AI와 대화</span>
         </NavLink>
       </div>
