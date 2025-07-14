@@ -79,3 +79,8 @@ yarn add serve
 yarn build
 npx serve -s build -l 3000
 ```
+## 구현 화면
+### 메인 화면
+![main Page](docs/images/1.png)
+
+![main Page](docs/images/2.png)
